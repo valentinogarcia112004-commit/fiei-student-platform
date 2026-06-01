@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Recurso - FIEI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>FIEI StudyHUB</h1>
+                <span>Subir Material Académico</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="resources.php">Recursos</a></li>
+                <li><a href="upload.html" class="active">Subir Material</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="upload-page">
+        <div class="upload-container">
+            <h2>📤 Subir Nuevo Recurso Académico</h2>
+            <p class="upload-description">Comparte material de estudio con tus compañeros de la FIEI</p>
+            
+            <form id="uploadForm" class="upload-form" action="backend/upload.php" method="POST" enctype="multipart/form-data">
+                <!-- Título del recurso -->
+                <div class="form-group">
+                    <label for="title">Título del Recurso *</label>
+                    <input type="text" id="title" name="title" required 
+                           placeholder="Ej: Guía Completa de Python para Principiantes">
+                </div>
+
+                <!-- Descripción -->
+                <div class="form-group">
+                    <label for="description">Descripción *</label>
+                    <textarea id="description" name="description" rows="4" required
+                              placeholder="Describe el contenido del recurso, temas cubiertos, etc."></textarea>
+                </div>
+
+                <!-- Categoría y Materia -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Categoría *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Seleccionar categoría</option>
+                            <option value="programming">Programación</option>
+                            <option value="math">Matemáticas</option>
+                            <option value="database">Bases de Datos</option>
+                            <option value="electronics">Electrónica</option>
+                            <option value="networks">Redes</option>
+                            <option value="telecom">Telecomunicaciones</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Materia *</label>
+                        <input type="text" id="subject" name="subject" required 
+                               placeholder="Ej: Programación I">
+                    </div>
+                </div>
+
+                <!-- Profesor y Fecha -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="teacher">Profesor</label>
+                        <input type="text" id="teacher" name="teacher" 
+                               placeholder="Nombre del profesor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Semestre</label>
+                        <select id="semester" name="semester">
+                            <option value="">Seleccionar semestre</option>
+                            <option value="2024-1">2024-I</option>
+                            <option value="2024-2">2024-II</option>
+                            <option value="2023-2">2023-II</option>
+                            <option value="2023-1">2023-I</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Zona de subida de archivo -->
+                <div class="form-group">
+                    <label>Archivo *</label>
+                    <div class="file-upload-zone" id="dropZone">
+                        <div class="file-upload-content">
+                            <span class="upload-icon">📁</span>
+                            <p>Arrastra y suelta tu archivo aquí</p>
+                            <p class="file-types">PDF, PPT, DOC, ZIP (Máx. 50MB)</p>
+                            <span class="browse-text">o haz clic para buscar</span>
+                        </div>
+                        <input type="file" id="fileInput" name="file" 
+                               accept=".pdf,.ppt,.pptx,.doc,.docx,.zip,.rar" hidden>
+                    </div>
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <span class="file-name" id="fileName"></span>
+                        <span class="file-size" id="fileSize"></span>
+                        <button type="button" class="btn-remove-file" id="removeFile">✕</button>
+                    </div>
+                </div>
+
+                <!-- Términos y condiciones -->
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" required>
+                        Acepto que este material es para fines académicos y no infringe derechos de autor
+                    </label>
+                </div>
+
+                <!-- Botón de envío -->
+                <button type="submit" class="btn-primary btn-full">
+                    📤 Subir Recurso
+                </button>
+            </form>
+
+            <!-- Guía rápida -->
+            <div class="upload-guide">
+                <h3>📋 Guía para Subir Recursos</h3>
+                <ul>
+                    <li>✅ Asegúrate de que el material sea original o de uso permitido</li>
+                    <li>✅ Usa nombres descriptivos para los archivos</li>
+                    <li>✅ Verifica que la categoría y materia sean correctas</li>
+                    <li>✅ Los archivos no deben superar los 50MB</li>
+                    <li>✅ Formatos aceptados: PDF, PPT, DOC, ZIP</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

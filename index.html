@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIEI - StudyHUB</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>FIEI StudyHUB</h1>
+                <span>Facultad de Ingeniería Electrónica e Informática</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Recursos</a></li>
+                <li><a href="login.html">Carreras</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner de Bienvenida -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a la Plataforma FIEI</h2>
+            <p>Recursos académicos, anuncios y herramientas para estudiantes</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn-primary">Registrarse</a>
+                <a href="login.html" class="btn-secondary">Explorar Recursos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Acceso Rápido -->
+    <section class="quick-access">
+        <div class="container">
+            <h2>Acceso Rápido</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Recursos Académicos</h3>
+                    <p>Material de estudio, apuntes y guías</p>
+                    <a href="login.html" class="card-link">Ver más →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📢</div>
+                    <h3>Anuncios</h3>
+                    <p>Noticias y eventos de la facultad</p>
+                    <a href="login.html" class="card-link">Ver más →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Carreras</h3>
+                    <p>Información de programas académicos</p>
+                    <a href="login.html" class="card-link">Ver más →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📞</div>
+                    <h3>Contacto</h3>
+                    <p>Consultas y sugerencias</p>
+                    <a href="contact.html" class="card-link">Ver más →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anuncios Recientes -->
+    <section class="announcements">
+        <div class="container">
+            <h2>Anuncios Recientes</h2>
+            <div class="announcement-list">
+                <div class="announcement-item">
+                    <img src="images/anuncio1.jpg" alt="Taller" class="announcement-image">
+                    <div class="announcement-text">
+                        <div class="date">25 Mayo 2026</div>
+                        <h3>Taller de Programación Web</h3>
+                        <p>Aprende HTML, CSS y JavaScript...</p>
+                        <a href="login.html" class="read-more">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="announcement-item">
+                    <img src="images/anuncio2.jpg" alt="Taller" class="announcement-image">
+                    <div class="announcement-text">
+                        <div class="date">20 Mayo 2026</div>
+                        <h3>Competencia de Robótica 2024</h3>
+                        <p>Inscripciones abiertas para la competencia anual</p>
+                        <a href="login.html" class="read-more">Leer más</a>
+                    </div>
+                </div>
+
+                <div class="announcement-item">
+                    <img src="images/anuncio3.jpg" alt="Taller" class="announcement-image">
+                    <div class="announcement-text">
+                        <div class="date">15 Mayo 2026</div>
+                        <h3>Conferencia: Inteligencia Artificial</h3>
+                        <p>Ponente internacional este viernes</p>
+                        <a href="login.html" class="read-more">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carreras -->
+    <section id="carreras" class="careers">
+        <div class="container">
+            <h2>Nuestras Carreras</h2>
+            <div class="careers-grid">
+                <div class="career-card">
+                    <img src="images/informatica.jpg" alt="Ingeniería Informática" class="career-image">
+                    <h3>Ingeniería Informática</h3>
+                    <p>Desarrollo de software, bases de datos y sistemas</p>
+                </div>
+                <div class="career-card">
+                    <img src="images/electronica.jpg" alt="Ingeniería Informática" class="career-image">
+                    <h3>Ingeniería Electrónica</h3>
+                    <p>Diseño de circuitos y sistemas electrónicos</p>
+                </div>
+                <div class="career-card">
+                    <img src="images/mecatronica.jpg" alt="Ingeniería Informática" class="career-image">
+                    <h3>Ingeniería Mecatrónica</h3>
+                    <p>Integración de mecánica, electrónica y control</p>
+                </div>
+                <div class="career-card">
+                    <img src="images/teleco.jpg" alt="Ingeniería Informática" class="career-image">
+                    <h3>Ing. de Telecomunicaciones</h3>
+                    <p>Redes y sistemas de comunicación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FIEI</h3>
+                    <p>Facultad de Ingeniería Electrónica e Informática</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📧 fiei@universidad.edu</p>
+                    <p>📱 +51 123 456 789</p>
+                    <p>📍 Iquique 127, Lima 15082</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#carreras">Carreras</a>
+                    <a href="#recursos">Recursos</a>
+                    <a href="login.html">Iniciar Sesión</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FIEI Platform - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

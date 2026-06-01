@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FIEI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>FIEI StudyHUB</h1>
+                <span>Contacto y Soporte</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="resources.php">Recursos</a></li>
+                <li><a href="upload.html">Subir Material</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contact-page">
+        <div class="contact-container">
+            <div class="contact-grid">
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-section">
+                    <h2>📬 Envíanos un Mensaje</h2>
+                    <p>¿Tienes dudas, sugerencias o necesitas ayuda? Contáctanos</p>
+                    
+                    <form id="contactForm" class="contact-form" action="backend/contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Ingresa tu nombre completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="usuario@universidad.edu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleccionar asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="problema">Reportar Problema</option>
+                                <option value="recurso">Solicitar Recurso</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">
+                            ✉️ Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info-section">
+                    <h2>📞 Información de Contacto</h2>
+                    
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <h3>Dirección</h3>
+                            <p>Iquique 127, Lima 15082</p>
+                            <p>FIEI - 4to Piso</p>
+                            <p>Lima, Perú</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <h3>Correo Electrónico</h3>
+                            <p>fiei@universidad.edu</p>
+                            <p>soporte.fiei@universidad.edu</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📱</div>
+                            <h3>Teléfonos</h3>
+                            <p>+51 1 234 5678</p>
+                            <p>+51 987 654 321</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">🕐</div>
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes</p>
+                            <p>8:00 AM - 6:00 PM</p>
+                            <p>Sábados: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="social-section">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="map-placeholder">
+                        <h3>🗺️ Nuestra Ubicación</h3>
+                        <a href="https://maps.app.goo.gl/oe6UocQUJYsSyoVb9" target="_blank"
+                            rel="noopener noreferrer" class="map-link-button">
+                            <span class="map-button-icon">📍</span>
+                            <span>Ver ubicación en Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Rápido -->
+            <div class="faq-section">
+                <h2>❓ Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>¿Cómo me registro en la plataforma?</h3>
+                        <p>Ve a la página de registro y completa el formulario con tu correo institucional.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Cómo subo un recurso?</h3>
+                        <p>Inicia sesión, ve a "Subir Material" y completa el formulario con la información del recurso.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué formatos de archivo aceptan?</h3>
+                        <p>Aceptamos PDF, PPT, DOC y archivos comprimidos ZIP/RAR hasta 50MB.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Quiénes pueden subir recursos?</h3>
+                        <p>Estudiantes y profesores registrados en la plataforma FIEI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
