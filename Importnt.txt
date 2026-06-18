@@ -1,0 +1,12 @@
+Archivo temporal para pruebas.
+Add temporary file
+Initial commit
+# Temporary Notes
+
+TODO:
+- Check repository structure
+- Review pending tasks
+- Update documentation if needed
+- Remove this file in future revisions
+
+Status: Draft
