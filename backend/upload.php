@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $filename = uniqid('file_') . '.' . $ext;
     move_uploaded_file($_FILES['file']['tmp_name'], $uploads_dir . $filename);
 
-    // Insertar en BD
+    // Insertar información del archivo en BD
     $stmt = $pdo->prepare("INSERT INTO resources (title, description, file_url, category, subject, teacher, semester, uploaded_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([$title, $description, 'uploads/' . $filename, $category, $subject, $teacher, $semester, $_SESSION['user_id']]);
 
